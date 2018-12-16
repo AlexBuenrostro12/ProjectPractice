@@ -9,7 +9,6 @@ export default class Layout extends Component {
         return (
             <Aux>
                 <StatusBar />                
-                <Toolbar />
                 <DrawerNavigation />
             </Aux>
         );

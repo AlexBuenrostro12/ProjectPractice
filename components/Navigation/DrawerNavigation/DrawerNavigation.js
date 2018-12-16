@@ -1,30 +1,24 @@
-import React, {Component} from 'react';
-import { View, SafeAreaView, ScrollView, Dimensions, StyleSheet, Image} from 'react-native';
-import { createDrawerNavigator, DrawerItems } from 'react-navigation';
-import HomeScreen from '../Screens/HomeScreen/HomeScreen';
-import SettingsScreen from '../Screens/SettingsScreen/SettingsScreen';
+
+import React from 'react';
+import {createDrawerNavigator, DrawerItems} from 'react-navigation';
+import {StyleSheet, View, Image, Text, SafeAreaView, ScrollView, Dimensions} from 'react-native';
+import HomeScreen from '../../Screens/HomeScreen/HomeScreen';
+import SettingsScreen from '../../Screens/SettingsScreen/SettingsScreen';
 import iconLogo from '../../../assets/images/logo.png';
 
-export default class DrawerNavigation extends Component {
-    render () {
-        return (
-            <AppDrawerNavigator />
-        );
-    }
-}
-
 const CustomDrawerComponent = ( props ) => (
-    <SafeAreaView style={styles.safeAreaView}>
+    <SafeAreaView style={styles.sAV}>
         <View style={styles.view}>
-            <Image style={styles.img} source={iconLogo}></Image>
+            <Image style={styles.image} source={iconLogo} />
         </View>
         <ScrollView>
-            <DrawerItems {...props}/>
+            <DrawerItems {...props} />
         </ScrollView>
     </SafeAreaView>
 );
 
-const AppDrawerNavigator = createDrawerNavigator({
+
+const draweNavigation = createDrawerNavigator({
     Home: HomeScreen,
     Settings: SettingsScreen
 },{
@@ -32,17 +26,20 @@ const AppDrawerNavigator = createDrawerNavigator({
 });
 
 const styles = StyleSheet.create({
-    safeAreaView: {
-      flex: 1
+    sAV: {
+        flex: 1
     },
-    view:{
-        height: 150,
+    view: {
+        height:150,
         backgroundColor: 'white',
         alignItems: 'center',
         justifyContent: 'center'
     },
-    img: {
-        width: 100,
-        height: 100,
+    image: {
+        height: 120,
+        width: 120,
+        borderRadius: 60
     }
-  });
+});
+
+export default draweNavigation

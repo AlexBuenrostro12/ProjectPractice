@@ -2,7 +2,6 @@ import React from 'react';
 import {View, StyleSheet, Text} from 'react-native';
 import Logo from '../../Logo/Logo';
 
-
 const toolbar = (props) => (
     <View style={styles.Toolbar}>
         <Text>MENU</Text>
@@ -27,8 +26,8 @@ const styles = StyleSheet.create({
       left: 0
     },
 
-    nav: {
-        height: '100%'
+    header: {
+        flex: 1,
     }
   });
 
