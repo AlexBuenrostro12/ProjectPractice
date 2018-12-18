@@ -1,24 +1,35 @@
 import React from 'react';
-import { Header, Left, Right, Icon, Container} from 'native-base';
-import {StyleSheet, View} from 'react-native';
+import { Header, Left, Right } from 'native-base';
+import { StyleSheet, TouchableHighlight, Image } from 'react-native';
+import iconMenu from '../../../assets/images/menu.png';
+import iconSerch from '../../../assets/images/serch.png';
 
 const drawerToggleButtton = ( props ) => (
     <Header>
         <Left>
-            <Icon  
-                name="eye" 
-                onPress={() => props.open.navigation.openDrawer()}/>
+            <TouchableHighlight onPress={() => props.open.navigation.openDrawer()}>
+                <Image 
+                    style={styles.icon} 
+                    source={iconMenu} />
+            </TouchableHighlight>
         </Left>
         <Right>
-        <Icon  
-                name="menu" 
-                onPress={() => props.open.navigation.openDrawer()}/>
+            <TouchableHighlight onPress={() => props.open.navigation.openDrawer()}>
+                <Image 
+                    style={styles.icon} 
+                    source={iconSerch} />
+            </TouchableHighlight>
         </Right>
     </Header>
+ 
+        
 );
 
 const styles = StyleSheet.create({
-    
+    icon: {
+        height: 25,
+        width: 25,
+      },
 });
 
 export default drawerToggleButtton;

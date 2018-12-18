@@ -1,12 +1,12 @@
 import React from 'react';
-import {View, Text, StyleSheet} from 'react-native';
-import DrawerToggleButton from '../../Navigation/DrawerToggleButton/DrawerToggleButton';
+import { View, Text, StyleSheet } from 'react-native';
+import HeaderToolbar from '../../HeaderToolbar/HeaderToolbar';
 
 const homeScreen = ( props ) => (
     <View style={styles.container}>
-        <DrawerToggleButton open={props} />
-        <View style={styles.text}>
-            <Text>You're in HomeScreen</Text>
+        <HeaderToolbar open={props} />
+        <View style={styles.view}>
+            <Text style={styles.text}>You're in HomeScreen</Text>
         </View>
     </View>
 );
@@ -15,10 +15,14 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
     },
-    text: {
+    view: {
         flex: 1,
         alignItems: 'center',
-        justifyContent: 'center'
+        justifyContent: 'center', 
+    },
+    text: {
+        fontSize: 20,
+        fontWeight: 'bold',
     }
 });
 

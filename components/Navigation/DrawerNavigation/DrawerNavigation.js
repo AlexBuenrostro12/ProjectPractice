@@ -1,7 +1,7 @@
 
 import React from 'react';
 import {createDrawerNavigator, DrawerItems} from 'react-navigation';
-import {StyleSheet, View, Image, Text, SafeAreaView, ScrollView, Dimensions} from 'react-native';
+import {StyleSheet, View, Image, SafeAreaView, ScrollView, Dimensions} from 'react-native';
 import HomeScreen from '../../Screens/HomeScreen/HomeScreen';
 import SettingsScreen from '../../Screens/SettingsScreen/SettingsScreen';
 import iconLogo from '../../../assets/images/logo.png';
